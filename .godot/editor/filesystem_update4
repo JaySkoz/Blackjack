@@ -1,0 +1,9 @@
+res://scenes/game.tscn
+res://scenes/play_area_dealer.tscn
+res://scripts/play_area.gd
+res://scenes/card/card.tscn
+res://scripts/card.gd
+res://scenes/play_area_player.tscn
+res://scripts/game_manager.gd
+res://scripts/play_area_player.gd
+res://scripts/play_area_dealer.gd

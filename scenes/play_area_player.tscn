@@ -1,0 +1,135 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4e4wvukfmdt2"]
+
+[ext_resource type="Script" path="res://scripts/play_area_player.gd" id="1_a3t0m"]
+[ext_resource type="FontFile" uid="uid://draoay5bktegv" path="res://assets/fonts/Kenney Blocks.ttf" id="1_g5kj2"]
+[ext_resource type="Script" path="res://scripts/button_draw.gd" id="2_dsiou"]
+[ext_resource type="Script" path="res://scripts/button_hit.gd" id="3_cyx02"]
+[ext_resource type="Script" path="res://scripts/button_stay.gd" id="4_73lqy"]
+[ext_resource type="Theme" uid="uid://6ibyibogermc" path="res://themes/font.tres" id="6_sgehu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6sbe"]
+bg_color = Color(0.172549, 0.172549, 0.172549, 0.192157)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ql1o"]
+bg_color = Color(0.254902, 0.254902, 0.254902, 0.192157)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bd1i"]
+bg_color = Color(0.360784, 0.360784, 0.360784, 0.0392157)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p5ifx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nscfh"]
+
+[node name="play_area_player" type="Node2D"]
+script = ExtResource("1_a3t0m")
+
+[node name="button_draw" type="Button" parent="."]
+offset_left = 121.0
+offset_top = 157.0
+offset_right = 155.0
+offset_bottom = 177.0
+theme_override_fonts/font = ExtResource("1_g5kj2")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6sbe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ql1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2bd1i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p5ifx")
+text = "Draw"
+script = ExtResource("2_dsiou")
+
+[node name="button_hit" type="Button" parent="."]
+visible = false
+offset_left = 121.0
+offset_top = 157.0
+offset_right = 155.0
+offset_bottom = 177.0
+theme_override_fonts/font = ExtResource("1_g5kj2")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6sbe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ql1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2bd1i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p5ifx")
+text = "Hit
+"
+script = ExtResource("3_cyx02")
+
+[node name="button_stay" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 157.0
+offset_right = 194.0
+offset_bottom = 177.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0.501961)
+theme_override_fonts/font = ExtResource("1_g5kj2")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6sbe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ql1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2bd1i")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nscfh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p5ifx")
+disabled = true
+text = "Stay
+"
+script = ExtResource("4_73lqy")
+
+[node name="score" type="Label" parent="."]
+visible = false
+offset_left = 152.0
+offset_top = 80.0
+offset_right = 158.0
+offset_bottom = 92.0
+theme = ExtResource("6_sgehu")
+theme_override_font_sizes/font_size = 8
+text = "0"
+
+[node name="label_bust" type="Label" parent="."]
+visible = false
+offset_left = 139.0
+offset_top = 70.0
+offset_right = 190.0
+offset_bottom = 93.0
+theme = ExtResource("6_sgehu")
+theme_override_colors/font_color = Color(1, 0.117647, 0.164706, 1)
+text = "BUST!"
+horizontal_alignment = 1
+
+[node name="label_win" type="Label" parent="."]
+visible = false
+offset_left = 139.0
+offset_top = 70.0
+offset_right = 190.0
+offset_bottom = 93.0
+theme = ExtResource("6_sgehu")
+theme_override_colors/font_color = Color(0.784314, 0.670588, 0, 1)
+text = "you win"
+horizontal_alignment = 1
+
+[node name="marker_card1" type="Marker2D" parent="." groups=["marker"]]
+position = Vector2(139, 96)
+
+[node name="marker_card2" type="Marker2D" parent="." groups=["marker"]]
+position = Vector2(147, 100)
+
+[node name="marker_card3" type="Marker2D" parent="." groups=["marker"]]
+position = Vector2(155, 104)
+
+[node name="marker_card4" type="Marker2D" parent="." groups=["marker"]]
+position = Vector2(163, 108)
+
+[node name="marker_card5" type="Marker2D" parent="." groups=["marker"]]
+position = Vector2(171, 112)
+
+[connection signal="pressed" from="button_draw" to="button_draw" method="_on_pressed"]
+[connection signal="pressed" from="button_hit" to="button_hit" method="_on_pressed"]
+[connection signal="pressed" from="button_stay" to="button_stay" method="_on_pressed"]

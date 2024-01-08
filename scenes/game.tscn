@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://bs81oj866cg11"]
+
+[ext_resource type="Texture2D" uid="uid://b2tsoq1op4gpd" path="res://assets/pictures/pokerbackground.jpg" id="1_1xt7e"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_h2kbf"]
+[ext_resource type="PackedScene" uid="uid://dojekg36gsuuy" path="res://scenes/card/deck.tscn" id="2_c3itg"]
+[ext_resource type="PackedScene" uid="uid://b4e4wvukfmdt2" path="res://scenes/play_area_player.tscn" id="4_pljb1"]
+[ext_resource type="Script" path="res://scripts/deck.gd" id="4_xgw3o"]
+[ext_resource type="PackedScene" uid="uid://b86801gjerobu" path="res://scenes/play_area_dealer.tscn" id="5_k51e0"]
+
+[node name="game" type="Node"]
+
+[node name="background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1xt7e")
+expand_mode = 1
+
+[node name="deck" parent="." instance=ExtResource("2_c3itg")]
+position = Vector2(160, -6)
+script = ExtResource("4_xgw3o")
+
+[node name="play_area_player" parent="." instance=ExtResource("4_pljb1")]
+
+[node name="play_area_dealer" parent="." instance=ExtResource("5_k51e0")]
+
+[node name="game_manager" type="Node" parent="."]
+script = ExtResource("1_h2kbf")

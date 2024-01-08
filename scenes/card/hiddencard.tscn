@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://xbwusgyhas6c"]
+
+[ext_resource type="Texture2D" uid="uid://cwmo8dlkny2mx" path="res://assets/deck-of-cards-sorted/Back2.png" id="1_13rtp"]
+
+[node name="card" type="Node2D"]
+
+[node name="face" type="Sprite2D" parent="."]
+position = Vector2(13.75, 21.25)
+scale = Vector2(0.419118, 0.435)
+texture = ExtResource("1_13rtp")

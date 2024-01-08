@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dojekg36gsuuy"]
+
+[ext_resource type="Texture2D" uid="uid://cwmo8dlkny2mx" path="res://assets/deck-of-cards-sorted/Back2.png" id="1_xjjgt"]
+
+[node name="stack" type="Node2D"]
+
+[node name="card1" type="Sprite2D" parent="."]
+scale = Vector2(0.419, 0.435)
+texture = ExtResource("1_xjjgt")
+
+[node name="card2" type="Sprite2D" parent="."]
+rotation = -0.0303771
+scale = Vector2(0.419, 0.435)
+texture = ExtResource("1_xjjgt")
+
+[node name="card3" type="Sprite2D" parent="."]
+rotation = 0.0350858
+scale = Vector2(0.419, 0.435)
+texture = ExtResource("1_xjjgt")
+
+[node name="card4" type="Sprite2D" parent="."]
+rotation = 0.0495404
+scale = Vector2(0.419, 0.435)
+texture = ExtResource("1_xjjgt")
+
+[node name="card5" type="Sprite2D" parent="."]
+scale = Vector2(0.419, 0.435)
+texture = ExtResource("1_xjjgt")

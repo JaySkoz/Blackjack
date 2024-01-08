@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvnlav7mxl3ab"]
+
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_76ibg"]
+[ext_resource type="Texture2D" uid="uid://x5qtno30rx46" path="res://assets/deck-of-cards-sorted/2.2.png" id="1_qx11l"]
+
+[node name="card" type="Node2D"]
+script = ExtResource("1_76ibg")
+
+[node name="face" type="Sprite2D" parent="."]
+position = Vector2(13.75, 21.25)
+scale = Vector2(0.419118, 0.435)
+texture = ExtResource("1_qx11l")
