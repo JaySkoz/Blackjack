@@ -3,7 +3,5 @@
 3. BLACKJACK.
 4. Chip bets.
 
-
-
 -- 6th card? What happens? Player wins?
 5 card charlie rule
