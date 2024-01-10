@@ -41,7 +41,12 @@ func StayPressed() -> void:
 	
 	await get_tree().create_timer(0.5).timeout;
 	#-- Calculate score
-	EndGame(true) if int(player_score.text) > int(dealer_score.text) else EndGame(false, "You Lose")
+	if int(player_score.text) > int(dealer_score.text):
+		EndGame(true);
+	elif int(player_score.text) < int(dealer_score.text):
+		EndGame(false, "You Lose");
+	else:
+		EndGame(false, "Tie");
 
 func HitPressed() -> void:
 	await get_tree().create_timer(0.5).timeout;
@@ -99,6 +104,7 @@ func ButtonControllerBegin() -> void:
 	var ButtonStay : Button = play_area_player.get_node("button_stay");
 	var LabelBust : Label = play_area_player.get_node("label_bust");
 	var LabelWin : Label = play_area_player.get_node("label_win");
+	var LabelTie : Label = play_area_player.get_node("label_tie");
 	
 	ButtonDraw.visible = false;
 	ButtonHit.visible = true;
@@ -108,6 +114,7 @@ func ButtonControllerBegin() -> void:
 	dealer_score.visible = true;
 	LabelBust.visible = false;
 	LabelWin.visible = false;
+	LabelTie.visible = false;
 	
 	player_score.text = "0";
 	dealer_score.text = "0";
@@ -129,16 +136,24 @@ func ButtonControllerEnd() -> void:
 func EndGame(isPlayerWin : bool, LoseLabel : String = ""):
 	var LabelBust : Label = play_area_player.get_node("label_bust");
 	var LabelWin : Label = play_area_player.get_node("label_win");
+	var LabelTie : Label = play_area_player.get_node("label_tie");
 	
 	ButtonControllerEnd();
 	
 	if isPlayerWin:
 		LabelBust.visible = false;
 		LabelWin.visible = true;
+		LabelTie.visible = false;
 	else:
-		LabelBust.text = LoseLabel
-		LabelBust.visible = true;
-		LabelWin.visible = false;
+		if LoseLabel == "Tie":
+			LabelBust.visible = false;
+			LabelWin.visible = false;
+			LabelTie.visible = true;
+		else:
+			LabelBust.text = LoseLabel;
+			LabelBust.visible = true;
+			LabelWin.visible = false;
+			LabelTie.visible = false;
 		
 func ClearCards() -> void:
 	for marker in play_area_player.get_tree().get_nodes_in_group("marker"):

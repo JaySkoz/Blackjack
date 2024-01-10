@@ -1,4 +1,4 @@
-1. Change Ace to 1 point if we bust from following card.
+x. Change Ace to 1 point if we bust from following card.
 2. Account for ties.
 3. BLACKJACK.
 4. Chip bets.

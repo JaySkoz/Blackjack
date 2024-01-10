@@ -15,15 +15,23 @@ func _process(delta):
 	pass
 
 func CalculateScore() -> int:
-	
 	var calcscore : int = 0;
 	
 	for marker in MARKERS:
 		var childcard : card = marker.get_child(0);
 		
-		if (childcard != null):
+		if childcard != null:
 			calcscore += childcard.VALUE;
-			
+	
+	if calcscore > 21:
+		for marker in MARKERS:
+			var childcard : card = marker.get_child(0);
+		
+			if childcard != null:
+				if childcard.isACE && childcard.VALUE == 11:
+					childcard.VALUE = 1;
+					return CalculateScore();
+	
 	return calcscore;
 
 func UpdateScore() -> void:

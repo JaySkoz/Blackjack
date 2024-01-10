@@ -5,6 +5,8 @@ var isFACEUP : bool = true;
 var FACE : String = "";
 var VALUE : int = 0;
 
+var isACE : bool = false;
+
 func SetCardInfo(isFaceUp : bool, face : String) -> void:
 	isFACEUP = isFaceUp;
 	FACE = face;
@@ -17,6 +19,7 @@ func GetCardValue() -> int :
 	
 	match (cardPoints):
 		"A":
+			isACE = true;
 			return 11;
 		"K", "Q", "J":
 			return 10;
