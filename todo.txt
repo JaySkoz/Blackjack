@@ -1,7 +1,12 @@
 x. Change Ace to 1 point if we bust from following card.
-x. Account for ties.
-3. BLACKJACK.
-4. Chip bets.
+2. Account for ties.
+x. BLACKJACK.
+x. Sounds.
+5. Chip bets.
 
 -- 6th card? What happens? Player wins?
 5 card charlie rule
+
+-- I added Tie label but new code needs added.
+-- Create properties in play_area_player for Win, Lose, Bust, Tie, Blackjack
+so it is easier to track results.

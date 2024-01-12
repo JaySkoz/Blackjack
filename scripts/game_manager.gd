@@ -41,7 +41,12 @@ func StayPressed() -> void:
 	
 	await get_tree().create_timer(0.5).timeout;
 	#-- Calculate score
-	EndGame(true) if int(player_score.text) > int(dealer_score.text) else EndGame(false, "You Lose")
+	if int(player_score.text) > int(dealer_score.text):
+		EndGame(true);
+	elif int(player_score.text) < int(dealer_score.text):
+		EndGame(false, "You Lose");
+	else:
+		EndGame(true, "Tied");
 
 func HitPressed() -> void:
 	await get_tree().create_timer(0.5).timeout;

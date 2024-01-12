@@ -2,6 +2,7 @@ class_name card
 extends Node2D
 
 var isFACEUP : bool = true;
+var isACE : bool = false;
 var FACE : String = "";
 var VALUE : int = 0;
 
@@ -20,6 +21,7 @@ func GetCardValue() -> int :
 	
 	match (cardPoints):
 		"A":
+			isACE = true;
 			return 11;
 		"K", "Q", "J":
 			return 10;
