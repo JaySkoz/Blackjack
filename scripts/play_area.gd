@@ -52,4 +52,5 @@ func ShowHiddenCard() -> void:
 			var cardFace : Sprite2D = childcard.get_node("face"); 
 			cardFace.texture = load("res://assets/deck-of-cards-sorted/" + childcard.FACE + ".png");
 			childcard.SetCardInfo(true, childcard.FACE)
+			childcard.PlaySoundFlipped();
 			return;

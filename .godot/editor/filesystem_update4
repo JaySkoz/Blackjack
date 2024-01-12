@@ -1,4 +1,1 @@
-res://scenes/game.tscn
-res://scenes/card/card.tscn
-res://scenes/play_area_player.tscn
-res://todo.txt
+res://scripts/game_manager.gd

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvnlav7mxl3ab"]
+[gd_scene load_steps=5 format=3 uid="uid://cvnlav7mxl3ab"]
 
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_76ibg"]
 [ext_resource type="Texture2D" uid="uid://x5qtno30rx46" path="res://assets/deck-of-cards-sorted/2.2.png" id="1_qx11l"]
+[ext_resource type="AudioStream" uid="uid://c6prwu6b6qarc" path="res://assets/sounds/zapsplat_leisure_playing_card_larger_thick_set_down_deal_single_002_72233.mp3" id="3_hjtyl"]
+[ext_resource type="AudioStream" uid="uid://c485oqak0sf1k" path="res://assets/sounds/zapsplat_leisure_playing_card_larger_thick_set_down_deal_single_001_72232.mp3" id="4_v3vny"]
 
 [node name="card" type="Node2D"]
 script = ExtResource("1_76ibg")
@@ -10,3 +12,10 @@ script = ExtResource("1_76ibg")
 position = Vector2(13.75, 21.25)
 scale = Vector2(0.419118, 0.435)
 texture = ExtResource("1_qx11l")
+
+[node name="AudioStream_placed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hjtyl")
+volume_db = -7.5
+
+[node name="AudioStream_flipped" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_v3vny")

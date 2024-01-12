@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704677943
+::res://::1705031821
 icon.svg::CompressedTexture2D::4736701287329705208::1703805041::1703805051::1::::<><>::
-licenses.txt::TextFile::-1::1704144000::0::1::::<><>::
-todo.txt::TextFile::-1::1704513678::0::1::::<><>::
-::res://assets/::1704677866
+licenses.txt::TextFile::-1::1705031344::0::1::::<><>::
+todo.txt::TextFile::-1::1705031297::0::1::::<><>::
+::res://assets/::1705030005
 ::res://assets/deck-of-cards-sorted/::1704677866
 2.2.png::CompressedTexture2D::1677280844002104301::1703906370::1703906371::1::::<><>::
 2.4.png::CompressedTexture2D::7293973956269096488::1703906370::1703906371::1::::<><>::
@@ -62,23 +62,26 @@ Q.7.png::CompressedTexture2D::4227792452222369332::1703906371::1704164139::1::::
 Kenney Blocks.ttf::FontFile::8353323737788670537::1704143861::1704143977::1::::<><>::
 ::res://assets/pictures/::1704677866
 pokerbackground.jpg::CompressedTexture2D::4321861427427381425::1703871994::1703872007::1::::<><>::
-::res://scenes/::1704677866
-game.tscn::PackedScene::3719548503126961222::1704658916::0::1::::<><>::uid://b2tsoq1op4gpd::::res://assets/pictures/pokerbackground.jpg<>res://scripts/game_manager.gd<>uid://dojekg36gsuuy::::res://scenes/card/deck.tscn<>uid://b4e4wvukfmdt2::::res://scenes/play_area_player.tscn<>res://scripts/deck.gd<>uid://b86801gjerobu::::res://scenes/play_area_dealer.tscn
+::res://assets/sounds/::1705030983
+zapsplat_leisure_playing_card_larger_thick_set_down_deal_single_001_72232.mp3::AudioStreamMP3::6878289650532855410::1705030965::1705030983::1::::<><>::
+zapsplat_leisure_playing_card_larger_thick_set_down_deal_single_002_72233.mp3::AudioStreamMP3::6980733761262471316::1705029995::1705030224::1::::<><>::
+::res://scenes/::1705031332
+game.tscn::PackedScene::3719548503126961222::1705031332::0::1::::<><>::uid://b2tsoq1op4gpd::::res://assets/pictures/pokerbackground.jpg<>res://scripts/game_manager.gd<>uid://dojekg36gsuuy::::res://scenes/card/deck.tscn<>uid://b4e4wvukfmdt2::::res://scenes/play_area_player.tscn<>res://scripts/deck.gd<>uid://b86801gjerobu::::res://scenes/play_area_dealer.tscn
 play_area_dealer.tscn::PackedScene::4768697915023817302::1704655789::0::1::::<><>::res://scripts/play_area_dealer.gd<>uid://6ibyibogermc::::res://themes/font.tres
-play_area_player.tscn::PackedScene::4431955874816367517::1704658916::0::1::::<><>::res://scripts/play_area_player.gd<>uid://draoay5bktegv::::res://assets/fonts/Kenney Blocks.ttf<>res://scripts/button_draw.gd<>res://scripts/button_hit.gd<>res://scripts/button_stay.gd<>uid://6ibyibogermc::::res://themes/font.tres
+play_area_player.tscn::PackedScene::4431955874816367517::1705031332::0::1::::<><>::res://scripts/play_area_player.gd<>uid://draoay5bktegv::::res://assets/fonts/Kenney Blocks.ttf<>res://scripts/button_draw.gd<>res://scripts/button_hit.gd<>res://scripts/button_stay.gd<>uid://6ibyibogermc::::res://themes/font.tres
 play_area_solo.tscn::PackedScene::9071022461037040670::1704148474::0::1::::<><>::uid://6ibyibogermc::::res://themes/font.tres
-::res://scenes/card/::1704677866
-card.tscn::PackedScene::6274313034508610233::1704658916::0::1::::<><>::res://scripts/card.gd<>uid://x5qtno30rx46::::res://assets/deck-of-cards-sorted/2.2.png
+::res://scenes/card/::1705031332
+card.tscn::PackedScene::6274313034508610233::1705031332::0::1::::<><>::res://scripts/card.gd<>uid://x5qtno30rx46::::res://assets/deck-of-cards-sorted/2.2.png<>uid://c6prwu6b6qarc::::res://assets/sounds/zapsplat_leisure_playing_card_larger_thick_set_down_deal_single_002_72233.mp3<>uid://c485oqak0sf1k::::res://assets/sounds/zapsplat_leisure_playing_card_larger_thick_set_down_deal_single_001_72232.mp3
 deck.tscn::PackedScene::8160746347520281312::1704515332::0::1::::<><>::uid://cwmo8dlkny2mx::::res://assets/deck-of-cards-sorted/Back2.png
 hiddencard.tscn::PackedScene::1617780226936720216::1704511711::0::1::::<><>::uid://cwmo8dlkny2mx::::res://assets/deck-of-cards-sorted/Back2.png
-::res://scripts/::1704677866
-button_draw.gd::GDScript::-1::1704229471::0::1::::<>Button<>::
-button_hit.gd::GDScript::-1::1704229471::0::1::::<>Button<>::
-button_stay.gd::GDScript::-1::1704229471::0::1::::<>Button<>::
-card.gd::GDScript::-1::1704656657::0::1::::card<>Node2D<>::
-deck.gd::GDScript::-1::1704220208::0::1::::deck<>Node2D<>::
-game_manager.gd::GDScript::-1::1704656701::0::1::::<>Node<>::
-play_area.gd::GDScript::-1::1704658915::0::1::::play_area<>Node<>::
+::res://scripts/::1705031509
+button_draw.gd::GDScript::-1::1705031344::0::1::::<>Button<>::
+button_hit.gd::GDScript::-1::1705031344::0::1::::<>Button<>::
+button_stay.gd::GDScript::-1::1705031344::0::1::::<>Button<>::
+card.gd::GDScript::-1::1705031344::0::1::::card<>Node2D<>::
+deck.gd::GDScript::-1::1705031344::0::1::::deck<>Node2D<>::
+game_manager.gd::GDScript::-1::1705031509::0::1::::<>Node<>::
+play_area.gd::GDScript::-1::1705031304::0::1::::play_area<>Node<>::
 play_area_dealer.gd::GDScript::-1::1704655789::0::1::::<>play_area<>::
 play_area_player.gd::GDScript::-1::1704655775::0::1::::<>play_area<>::
 ::res://themes/::1704677866

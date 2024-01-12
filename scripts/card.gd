@@ -5,7 +5,8 @@ var isFACEUP : bool = true;
 var FACE : String = "";
 var VALUE : int = 0;
 
-var isACE : bool = false;
+@onready var PLACED_SOUND : AudioStreamPlayer2D = $AudioStream_placed;
+@onready var FLIPPED_SOUND : AudioStreamPlayer2D = $AudioStream_flipped;
 
 func SetCardInfo(isFaceUp : bool, face : String) -> void:
 	isFACEUP = isFaceUp;
@@ -19,9 +20,14 @@ func GetCardValue() -> int :
 	
 	match (cardPoints):
 		"A":
-			isACE = true;
 			return 11;
 		"K", "Q", "J":
 			return 10;
 		_:
 			return int(cardPoints);
+
+func PlaySoundPlaced() -> void:
+	PLACED_SOUND.play();
+
+func PlaySoundFlipped() -> void:
+	FLIPPED_SOUND.play();
